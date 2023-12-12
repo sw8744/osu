@@ -7,7 +7,7 @@ const connection = mysql.createConnection(process.env.DATABASE_URL);
 const app = express();
 
 app.get('/', (req: any, res: any) => {
-    res.send('Hello!');
+    res.send('OSU! API V1.0');
 });
 
 app.get('/get', (req: any, res: any) => {
@@ -17,6 +17,10 @@ app.get('/get', (req: any, res: any) => {
             res.send(results);
         }
     );
+});
+
+app.get('*', (req: any, res: any) => {
+    res.status(404).send('404 Not Found');
 });
 
 app.listen(5500);
