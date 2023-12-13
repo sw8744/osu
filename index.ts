@@ -2,6 +2,8 @@ const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
 const helmet = require('helmet');
+const http = require('http');
+const https = require('https');
 
 const mysql = require('mysql2');
 const connection = mysql.createConnection(process.env.DATABASE_URL);
@@ -42,4 +44,5 @@ app.get('*', (req: any, res: any) => {
     res.status(404).send('404 Not Found');
 });
 
-app.listen(5500);
+http.createServer(app).listen(8080);
+https.createServer(app).listen(8443);
