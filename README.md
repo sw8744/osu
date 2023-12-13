@@ -7,7 +7,7 @@
 
 API 테스트는 [Github 레포지토리](https://github.com/sw8744/osu-test)를 Clone해서 로컬 환경에서 실행하면 된다.
 # 사용법
-[http://osu-api.kro.kr:5500/](http://osu-api.kro.kr:5500/)에 접속하여 사용하면 된다.
+[http://osu-api.kro.kr:8080/](http://osu-api.kro.kr:8080/) 또는 [http://osu-api.kro.kr:8443/](http://osu-api.kro.kr:8443/)에 접속하여 사용하면 된다.
 출력 데이터는 다음과 같은 형식을 띄고 있다.
 ```
     [
