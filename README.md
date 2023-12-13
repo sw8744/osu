@@ -5,6 +5,7 @@
 
 또한, 수능 문제 관련하여 다른 API를 제작하고 싶은 사람들을 위해 Git에 문제 이미지도 첨부한다.
 
+API 테스트는 [https://sw8744.github.io/osu-test/](https://sw8744.github.io/osu-test/)에서 해볼 수 있다. [Github 레포지토리](https://github.com/sw8744/osu-test)
 # 사용법
 [http://osu-api.kro.kr:5500/](http://osu-api.kro.kr:5500/)에 접속하여 사용하면 된다.
 출력 데이터는 다음과 같은 형식을 띄고 있다.
