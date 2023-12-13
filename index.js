@@ -2,10 +2,16 @@
 const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
+const helmet = require('helmet');
 const mysql = require('mysql2');
 const connection = mysql.createConnection(process.env.DATABASE_URL);
+const cspDefaults = helmet.contentSecurityPolicy.getDefaultDirectives();
+delete cspDefaults['upgrade-insecure-requests'];
 const app = express();
 app.use(cors());
+app.use(helmet({
+    contentSecurityPolicy: { directives: cspDefaults }
+}));
 app.get('/', (req, res) => {
     res.status(200).send('OSU! API V1.0');
 });
